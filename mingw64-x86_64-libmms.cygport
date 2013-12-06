@@ -1,0 +1,20 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libmms"
+VERSION=0.6.2
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MMS stream parser library for Win64 toolchain"
+DESCRIPTION="LibMMS is common library for parsing mms:// and mmsh:// type
+network streams. These are commonly used to stream Windows Media Video content
+over the web. LibMMS itself is only for receiving MMS stream, it doesn't
+handle sending at all."
+HOMEPAGE="http://sourceforge.net/projects/libmms/"
+SRC_URI="mirror://sourceforge/libmms/libmms-${VERSION}.tar.gz"
+SRC_DIR="libmms-${VERSION}"
+PATCH_URI="0.6.2-iconv.patch"
+
+DISTCLEANFILES="src/mms_config.h"
+
+DOCS="README.LICENSE"
